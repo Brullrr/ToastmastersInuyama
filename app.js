@@ -1152,12 +1152,11 @@ const openModal = (userProfile) => {
   levelAndSpeechHolder.classList.add("levelAndSpeechHolder");
   modal.appendChild(levelAndSpeechHolder);
   // COLORS THAT CHANGE
-  let purple = "rgba(107, 12, 161, 0.65)";
-  let darkpurple = "rgba(48, 25, 52, 0.65)";
-  let lightblue = "rgba(39, 125, 201, 0.65)";
-  let blue = "rgba(11, 41, 184, 0.65)";
-  let darkblue = "rgba(33, 12, 119, 0.65)";
-
+  let lightblue = `linear-gradient(rgba(26, 169, 208, 0.7) 70%, rgba(36, 136, 213, 0.7) 100%)`; 
+  let blue = `linear-gradient(rgba(36, 136, 213, 0.7) 70%, rgba(54, 105, 213, 0.7) 100%)`;
+  let darkblue = `linear-gradient(rgba(54, 105, 213, 0.7) 70%, rgba(33, 64, 163, 0.7) 100%)`;
+  let purple = `linear-gradient(rgba(33, 64, 163, 0.7) 70%, rgba(22, 31, 111, 0.7) 100%)`;
+  let darkpurple = `linear-gradient(rgba(22, 31, 111, 0.7) 70%, rgba(20, 35, 68, 0.7) 100%)`;
   for (let i = 1; i < 6; i++) {
     let levelHolder = document.createElement("div");
     levelHolder.classList.add("levelHolder");
@@ -1179,7 +1178,7 @@ const openModal = (userProfile) => {
       levelHolderBackgroundColor = darkpurple;
     }
 
-    levelHolder.style.backgroundColor = levelHolderBackgroundColor;
+    levelHolder.style.background = levelHolderBackgroundColor;
     levelAndSpeechHolder.appendChild(levelHolder);
 
     let levelIcon = document.createElement("img");
@@ -1189,24 +1188,24 @@ const openModal = (userProfile) => {
 
     let speechesHolder = document.createElement("div");
     speechesHolder.classList.add("speechesHolder");
-    let speechesHolderBackgroundColor = "white";
+    // let speechesHolderBackgroundColor = "white";
 
-    if (i === 1) {
-      speechesHolderBackgroundColor = lightblue;
-    }
-    if (i === 2) {
-      speechesHolderBackgroundColor = blue;
-    }
-    if (i === 3) {
-      speechesHolderBackgroundColor = darkblue;
-    }
-    if (i === 4) {
-      speechesHolderBackgroundColor = purple;
-    }
-    if (i === 5) {
-      speechesHolderBackgroundColor = darkpurple;
-    }
-    speechesHolder.style.backgroundColor = levelHolderBackgroundColor;
+    // if (i === 1) {
+    //   speechesHolderBackgroundColor = lightblue;
+    // }
+    // if (i === 2) {
+    //   speechesHolderBackgroundColor = blue;
+    // }
+    // if (i === 3) {
+    //   speechesHolderBackgroundColor = darkblue;
+    // }
+    // if (i === 4) {
+    //   speechesHolderBackgroundColor = purple;
+    // }
+    // if (i === 5) {
+    //   speechesHolderBackgroundColor = darkpurple;
+    // }
+    speechesHolder.style.background = levelHolderBackgroundColor;
     levelAndSpeechHolder.appendChild(speechesHolder);
 
     userPathwaysSpeechesClone.forEach((e) => {
